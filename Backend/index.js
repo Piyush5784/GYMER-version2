@@ -20,6 +20,10 @@ app.use("/admin", adminRoutes)
 
 app.use("/api/payment/", paymentRoutes)
 
+app.get("/", (req, res)){
+    res.send("Working")
+}
+
 app.use((err, req, res) => {
     console.log(err)
     return res.json({

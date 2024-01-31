@@ -1,5 +1,5 @@
 const express = require("express");
-const { getUsers, adminLogin, registerAdmin } = require("./functions/AdminHandler");
+const { getUsers, adminLogin } = require("./functions/AdminHandler");
 const { tokenVerify } = require("../Middlewares/tokenVerify");
 
 const adminRoutes = express.Router();
