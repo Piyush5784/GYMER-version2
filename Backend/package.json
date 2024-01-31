@@ -9,6 +9,7 @@
     "razorpay": "^2.9.2"
   },
   "scripts": {
-    "start": "npx nodemon App.js"
+    "start": "npx nodemon App.js",
+    "dev": "node App.js"
   }
 }
