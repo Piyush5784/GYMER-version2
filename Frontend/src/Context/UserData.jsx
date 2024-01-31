@@ -5,8 +5,9 @@ import axios from "axios";
 export const UserDataContext = createContext();
 
 export async function getData(token) {
+    const Base_url = "http://localhost:3001"
     try {
-        const response = await axios.post("http://localhost:3001/users/getUsersData", { authToken: token })
+        const response = await axios.post(`${Base_url}/users/getUsersData`, { authToken: token })
         // console.log(response)
 
         return response;
@@ -39,7 +40,7 @@ export const UserDataProvider = ({ children }) => {
     }, []);
 
     return (
-        <UserDataContext.Provider value={{ userData, setUserDataState }}>
+        <UserDataContext.Provider value={{ userData, setUserDataState, Base_url }}>
             {children}
         </UserDataContext.Provider>
     );
