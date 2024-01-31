@@ -1,0 +1,17 @@
+{
+  "name": "gymer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "Client": "cd Frontend && npm start",
+    "Server": "cd Backend && npm start",
+    "dev": "concurrently \"npm run Client\" \"npm run Server\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

@@ -1,0 +1,18 @@
+.container {
+    height: "350px";
+    width: "300px";
+    background-color: "black";
+    border-radius: "10px";
+    color: "white"
+}
+
+.button {
+    margin-top: "20px";
+    margin-left: "1rem";
+    width: "9.375rem";
+    background-color: "black";
+    height: "3.75rem";
+    font-size: "1.25rem";
+    font-weight: "bolder";
+    font-family: "Judson"
+}

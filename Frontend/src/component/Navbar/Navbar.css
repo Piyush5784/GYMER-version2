@@ -1,0 +1,34 @@
+.nav-logo {
+    display: none;
+
+    color: white;
+    margin: 10px;
+    background-color: black;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+@media only screen and (max-width: 767px) {
+    .nav {
+        display: none;
+    }
+
+    .nav-logo {
+        display: block;
+        position: absolute;
+        right: 0;
+    }
+}
+
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    /* Styles for medium screens */
+}
+
+
+@media only screen and (min-width: 992px) {
+    /* Styles for large screens */
+}
