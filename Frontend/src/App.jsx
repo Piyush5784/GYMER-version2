@@ -6,9 +6,8 @@ import Navbar from './component/Navbar/Navbar.jsx'
 import Login from './pages/Login/Login'
 import Register from './component/Register'
 import Dashboard from './pages/Dashboard/Dashboard'
-import { UserDataProvider } from './Context/userData'
 import Rates from './pages/Rates/Rates'
-
+import { UserDataProvider } from './Context/UserData.jsx'
 function App() {
 
   return (
@@ -27,7 +26,6 @@ function App() {
 
             <Route path='/dashboard' element={<Dashboard />}></Route>
 
-            {/* <Route path='/dashboard' element={<Dashboard />}></Route> */}
 
             <Route path='/rates' element={<Rates />}></Route>
           </Routes>
