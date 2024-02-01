@@ -8,6 +8,8 @@ const { tokenVerify } = require("../Middlewares/tokenVerify");
 
 router.post("/login", userLogin)
 
+router.get("/",(req,res)=>{res.send("working")})
+
 router.post("/purchaseCourse", tokenVerify, purchaseCourse)
 
 router.post("/register", userRegister)
