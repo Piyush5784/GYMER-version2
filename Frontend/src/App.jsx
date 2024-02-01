@@ -7,7 +7,7 @@ import Login from './pages/Login/Login'
 import Register from './component/Register'
 import Dashboard from './pages/Dashboard/Dashboard'
 import Rates from './pages/Rates/Rates'
-import { UserDataProvider } from './Context/UserData.jsx'
+import { UserDataProvider } from "./Context/UserData.jsx"
 function App() {
 
   return (
