@@ -3,7 +3,6 @@ import Heading from "../../component/Heading.jsx"
 import Plans from "../../component/Plans/Plans.jsx";
 import ButtonBlack from "../../component/ButtonBlack.jsx";
 import { getData } from "../../Context/userData.jsx";
-
 import { handlePayment } from "../../../PaymentFunctions.js";
 import { useNavigate } from "react-router-dom";
 const Rates = () => {
