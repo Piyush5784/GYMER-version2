@@ -4,10 +4,9 @@ import axios from "axios";
 
 export const UserDataContext = createContext();
 
-const Base_url = "http://localhost:3001"
+export const Base_url = "http://localhost:3001"
 
 export async function getData(token) {
-    // const Base_url = "http://localhost:3001"
     try {
         const response = await axios.post(`${Base_url}/users/getUsersData`, { authToken: token })
         // console.log(response)

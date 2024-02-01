@@ -4,11 +4,10 @@ import "./Login.css"
 import { Link, useNavigate } from "react-router-dom";
 import { loginFormat } from "../../../format";
 import axios from "axios";
-// import { UserDataContext } from "../../Context/userData";
+import { UserDataContext } from "../../Context/UserData";
 
 const Login = () => {
     let navigate = useNavigate();
-    // let data = useContext(UserDataContext);
 
     let Username = useRef("")
     let Password = useRef("")
