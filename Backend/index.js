@@ -10,7 +10,13 @@ const port = 3001 || process.env.port;
 const cors = require("cors")
 const paymentRoutes = require("./routes/Payment")
 
-app.use(cors())
+app.use(cors(
+     {
+        origin: ["https://gymer-version2-mfa6jjry2-piyushs-projects-b6f90a7d.vercel.app"],
+        methods: ["POST", "GET"],
+        credentials: true
+    }
+))
 
 app.use(express.json());
 
