@@ -4,8 +4,7 @@ import "./Login.css"
 import { Link, useNavigate } from "react-router-dom";
 import { loginFormat } from "../../../format";
 import axios from "axios";
-import { UserDataContext } from "../../Context/UserData";
-
+import backend from "../../../backend"
 const Login = () => {
     let navigate = useNavigate();
 
@@ -43,7 +42,7 @@ const Login = () => {
 
         async function getResponse(inputs) {
 
-            const response = await axios.post("http://localhost:3001/users/login", { inputs })
+            const response = await axios.post(`${backend}/users/login`, { inputs })
             let Message = response.data.Message;
             console.log(response)
             if (Message == "User Logged in") {

@@ -3,7 +3,7 @@ import profilePic from "../assets/profile_pic.png"
 import { Link, useNavigate } from "react-router-dom";
 import { registerModel } from "../../format";
 import axios from "axios";
-
+import BackendURL from "../../backend";
 
 const Register = () => {
     let navigate = useNavigate()
@@ -13,7 +13,7 @@ const Register = () => {
     let Email = useRef("")
 
     async function getResponse(inputs) {
-        const response = await axios.post("http://localhost:3001/users/register", { inputs })
+        const response = await axios.post(`${BackendURL}/users/register`, { inputs })
         console.log(response)
         let Message = response.data;
         alert(Message);

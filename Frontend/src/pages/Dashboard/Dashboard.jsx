@@ -10,6 +10,7 @@ import PersonalInfo from "../../component/PersonalInfo.jsx";
 import BackButton from "./BackButton.jsx";
 import axios from "axios";
 import SuccessMsg from "../../component/SuccessMsg.jsx";
+import backend from "../../../backend.js";
 const Dashboard = () => {
 
     const [userDta, setUserData] = useState()
@@ -27,7 +28,7 @@ const Dashboard = () => {
 
     async function getData(authToken) {
         try {
-            const response = await axios.post("http://localhost:3001/users/getUsersData", { authToken });
+            const response = await axios.post(`${backend}/users/getUsersData`, { authToken });
 
             if (response.data.Message == "Success") {
                 <SuccessMsg text={"login Successful"} />

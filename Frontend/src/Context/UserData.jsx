@@ -1,14 +1,14 @@
 import React, { createContext, useState, useEffect } from "react";
 import axios from "axios";
+import BackendURL from "../../backend";
 
 
 export const UserDataContext = createContext();
 
-export const Base_url = "http://localhost:3001"
 
 export async function getData(token) {
     try {
-        const response = await axios.post(`${Base_url}/users/getUsersData`, { authToken: token })
+        const response = await axios.post(`${BackendURL}/users/getUsersData`, { authToken: token })
         // console.log(response)
 
         return response;
@@ -41,7 +41,7 @@ export const UserDataProvider = ({ children }) => {
     }, []);
 
     return (
-        <UserDataContext.Provider value={{ userData, setUserDataState, Base_url }}>
+        <UserDataContext.Provider value={{ userData, setUserDataState }}>
             {children}
         </UserDataContext.Provider>
     );
