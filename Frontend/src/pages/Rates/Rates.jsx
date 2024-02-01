@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import Heading from "../../component/Heading.jsx"
 import Plans from "../../component/Plans/Plans.jsx";
 import ButtonBlack from "../../component/ButtonBlack.jsx";
-import { getData } from "../../Context/userData.jsx";
+import { getData } from "../../Context/User.jsx";
 import { handlePayment } from "../../../PaymentFunctions.js";
 import { useNavigate } from "react-router-dom";
 const Rates = () => {

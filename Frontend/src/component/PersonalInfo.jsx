@@ -1,8 +1,5 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { useContext } from "react";
-import { useNavigate } from "react-router-dom";
-import { UserDataContext } from "../Context/userData";
 import profilePic from "../assets/profile_pic.png"
 const PersonalInfo = ({ userDta }) => {
 

@@ -5,7 +5,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import Button from "../Button";
 import { Link, useNavigate } from "react-router-dom";
-import { UserDataContext } from "../../Context/UserData.jsx";
+import { UserDataContext } from "../../Context/User";
 import "./Navbar.css";
 import { AiOutlineMenu } from "react-icons/ai";
 
