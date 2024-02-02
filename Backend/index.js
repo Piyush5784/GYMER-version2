@@ -5,7 +5,7 @@ const userRoutes = require("./routes/users")
 const adminRoutes = require("./routes/admin");
 const mongoose = require("mongoose");
 require("dotenv").config();
-const url = process.env.mongoDbUrl || "mongodb://0.0.0.0:27017";
+const url = process.env.mongoDbUrl || "mongodb://0.0.0.0:27017"
 const port = 3001 || process.env.port;
 const cors = require("cors")
 const paymentRoutes = require("./routes/Payment")

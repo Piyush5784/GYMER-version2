@@ -1,4 +1,5 @@
 import axios from "axios";
+import backend from "./backend";
 
 export const initPayment = ({ data }, name, token) => {
 
@@ -11,10 +12,10 @@ export const initPayment = ({ data }, name, token) => {
         order_id: data.id,
         handler: async (response) => {
             try {
-                const verifyUrl = 'http://localhost:3001/api/payment/verify';
+                const verifyUrl = `${backend}/api/payment/verify`;
                 const { data } = await axios.post(verifyUrl, response)
                 if (data.Message == "Payment Verified Successfully") {
-                    const updateUserDataURL = "http://localhost:3001/users/purchaseCourse";
+                    const updateUserDataURL = `${backend}/users/purchaseCourse`;
                     const updataData = await axios.post(updateUserDataURL, { authToken: token, planName: name })
                     alert(updataData.data.Message)
 
@@ -52,7 +53,7 @@ export async function changePassword(oldpass, newpass) {
     console.log(oldpass, newpass)
 
     try {
-        const updateUrl = "http://localhost:3001/users/changePassword"
+        const updateUrl = `${backend}/users/changePassword`
         const response = await axios.post(updateUrl, { authToken, oldpass, newpass });
         console.log(response)
         alert(response.data.Message)
@@ -65,7 +66,7 @@ export async function changePassword(oldpass, newpass) {
 
 
 export async function handlePayment(name, token) {
-    const orderUrl = "http://localhost:3001/api/payment/orders"
+    const orderUrl = `${backend}/api/payment/orders`;
     try {
         const { data } = await axios.post(orderUrl, { planName: name })
         initPayment(data, name, token)
