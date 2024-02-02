@@ -42,7 +42,7 @@ router.post("/orders", async (req, res) => {
             if (error) {
                 console.log(error)
                 return res.json({
-                    Message: "Something Went Wrong!"
+                    Message: "Something Went Wrong!",error
                 })
             }
             res.status(200).json({ data: order })
