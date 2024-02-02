@@ -41,7 +41,7 @@ const Login = () => {
         }
 
         async function getResponse(inputs) {
-
+            console.log(`${backend}/users/login`)
             const response = await axios.post(`${backend}/users/login`, { inputs })
             let Message = response.data.Message;
             console.log(response)

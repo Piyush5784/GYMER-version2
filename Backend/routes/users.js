@@ -10,6 +10,10 @@ router.post("/login", userLogin)
 
 router.post("/purchaseCourse", tokenVerify, purchaseCourse)
 
+router.get("/", (req, res) => {
+    res.send("Working")
+})
+
 router.post("/register", userRegister)
 
 router.post("/changePassword", tokenVerify, changePassword)

@@ -30,6 +30,6 @@ app.use((err, req, res) => {
 
 mongoose.connect(url).then(
     app.listen(port, () => {
-        console.log("Mongodb Connected and server is running")
+        console.log("Mongodb Connected and server is running on 3001")
     })
 )
