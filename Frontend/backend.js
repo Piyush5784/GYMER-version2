@@ -1,7 +1,4 @@
-const BackendURL = "https://gymer-version2-mfa6jjry2-piyushs-projects-b6f90a7d.vercel.app"
-
-// const BackendURL = "http://localhost:3001"
-
-
+const BackendURL = "https://gymer-version2-ptnksbifp-piyushs-projects-b6f90a7d.vercel.app"
+// const BackendURL = "https://gymer-version2.vercel.app/"
 
 export default BackendURL;
