@@ -33,7 +33,7 @@ router.post("/orders", async (req, res) => {
         let amt = getAmount({ planName });
 
         const options = {
-            amount: amt * 100,
+            amount: amt * 10000,
             currency: "INR",
             receipt: "receipt#" + Math.floor(Math.random * 10),
         }
@@ -42,7 +42,7 @@ router.post("/orders", async (req, res) => {
             if (error) {
                 console.log(error)
                 return res.json({
-                    Message: "Something Went Wrong!"
+                    Message: "Something Went Wrong!",error
                 })
             }
             res.status(200).json({ data: order })
