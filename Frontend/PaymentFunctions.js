@@ -1,7 +1,7 @@
 import axios from "axios";
 import backend from "./backend";
 
-export const initPayment = ({ data }, name, token) => {
+export const initPayment = (data, name, token) => {
 
     const options = {
         key: 'rzp_test_JiEJrykMcKRloz',
@@ -68,7 +68,8 @@ export async function changePassword(oldpass, newpass) {
 export async function handlePayment(name, token) {
     const orderUrl = `${backend}/api/payment/orders`;
     try {
-        const { data } = await axios.post(orderUrl, { planName: name })
+        const data = await axios.post(orderUrl, { planName: name })
+        console.log(data)
         initPayment(data, name, token)
     } catch (error) {
         console.log(error)
