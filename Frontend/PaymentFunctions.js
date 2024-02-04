@@ -68,9 +68,9 @@ export async function changePassword(oldpass, newpass) {
 export async function handlePayment(name, token) {
     const orderUrl = `${backend}/api/payment/orders`;
     try {
-        const data = await axios.post(orderUrl, { planName: name })
-        console.log(data)
-        initPayment(data, name, token)
+        const {data} = await axios.post(orderUrl, { planName: name })
+       
+        initPayment(data.data, name, token)
     } catch (error) {
         console.log(error)
     }
