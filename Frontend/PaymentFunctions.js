@@ -17,7 +17,7 @@ export const initPayment = (data, name, token) => {
                 if (data.Message == "Payment Verified Successfully") {
                     const updateUserDataURL = `${backend}/users/purchaseCourse`;
                     const updataData = await axios.post(updateUserDataURL, { authToken: token, planName: name })
-                    alert(updataData.data.Message)
+                    alert("User Successfully Registered");
 
                 }
             } catch (error) {
