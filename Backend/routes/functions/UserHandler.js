@@ -21,9 +21,9 @@ async function getUsersData(req, res) {
         })
 
     } catch (error) {
-        console.log("Error Occurs")
+        
         res.json({
-            Message: "Something error happens while importing user data"
+            Message: "Something error happens while importing user data",error
         })
     }
 
