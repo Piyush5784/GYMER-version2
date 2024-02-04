@@ -51,7 +51,7 @@ router.post("/orders", async (req, res) => {
     } catch (error) {
         console.log(error)
         res.json({
-            Message: "Internal Server Error!"
+            Message: "Internal Server Error!",error
         })
     }
 })
