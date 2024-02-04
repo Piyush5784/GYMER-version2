@@ -33,7 +33,7 @@ router.post("/orders", async (req, res) => {
         let amt = getAmount({ planName });
 
         const options = {
-            amount: amt * 10000,
+            amount: amt * 100,
             currency: "INR",
             receipt: "receipt#" + Math.floor(Math.random * 10),
         }
