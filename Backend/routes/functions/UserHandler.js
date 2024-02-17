@@ -104,10 +104,14 @@ async function userRegister(req, res) {
         })
 
         if (userExistUsername) {
-            return res.send("User Already Exists with this username")
+            return res.json({
+            Message: "User Already Exist with this Username"
+            })
         }
         if (userExistEmail) {
-            return res.send("User Already Exist with this Email")
+            return res.json({
+            Message: "User Already Exist with this Email"
+            })
         }
 
         const hashedPass = await bcrypt.hash(password.toString(), 10);
