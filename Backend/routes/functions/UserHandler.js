@@ -49,7 +49,7 @@ async function userLogin(req, res) {
             })
         }
 
-        let comparePass = await bcrypt.compare(password.toString(), userExist.password);
+        let comparePass = await bcrypt.compare(password, userExist.password);
 
 
         if (!comparePass) {
@@ -110,7 +110,7 @@ async function userRegister(req, res) {
             return res.send("User Already Exist with this Email")
         }
 
-        const hashedPass = await bcrypt.hash(password, 10);
+        const hashedPass = await bcrypt.hash(password.toString(), 10);
 
         const user = await userModel.create({
             email,
