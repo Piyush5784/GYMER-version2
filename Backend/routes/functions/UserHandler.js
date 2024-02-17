@@ -49,7 +49,7 @@ async function userLogin(req, res) {
             })
         }
 
-        let comparePass = await bcrypt.compare(password, userExist.password);
+        let comparePass = await bcrypt.compare(password.toString(), userExist.password);
 
 
         if (!comparePass) {
