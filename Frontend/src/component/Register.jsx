@@ -15,7 +15,7 @@ const Register = () => {
     async function getResponse(inputs) {
         const response = await axios.post(`${BackendURL}/users/register`, { inputs })
         console.log(response)
-        let Message = response.data;
+        let Message = response.data.Message;
         alert(Message);
 
         if (Message == "User Successfully Registered" || Message == "User Already Exists with this email") {
