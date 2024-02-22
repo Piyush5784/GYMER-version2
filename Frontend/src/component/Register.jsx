@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useEffect, useMemo, useRef } from "react";
 import profilePic from "../assets/profile_pic.png"
 import { Link, useNavigate } from "react-router-dom";
 import { registerModel } from "../../format";
@@ -7,18 +7,20 @@ import BackendURL from "../../backend";
 
 const Register = () => {
     let navigate = useNavigate()
+    let inputs = {};
 
     let Username = useRef("")
     let Password = useRef("")
     let Email = useRef("")
 
+
     async function getResponse(inputs) {
         const response = await axios.post(`${BackendURL}/users/register`, { inputs })
         console.log(response)
-        let Message = response.data;
+        let Message = response.data.message;
         alert(Message);
 
-        if (Message == "User Successfully Registered" || Message == "User Already Exists with this email") {
+        if (Message == "User successfully registered" || Message == "User already exists with this username") {
             navigate("/login")
         }
 
@@ -26,9 +28,7 @@ const Register = () => {
 
 
     async function registerButtonHandler() {
-
-
-        let inputs = {
+        inputs = {
             username: Username.current.value,
             password: Password.current.value,
             email: Email.current.value

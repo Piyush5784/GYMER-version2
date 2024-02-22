@@ -21,9 +21,9 @@ async function getUsersData(req, res) {
         })
 
     } catch (error) {
-        
+
         res.json({
-            Message: "Something error happens while importing user data",error
+            Message: "Something error happens while importing user data", error
         })
     }
 
@@ -76,9 +76,10 @@ async function userLogin(req, res) {
 
 async function userRegister(req, res) {
     let { inputs } = req.body
-    console.log(inputs)
 
     let { username, password, email } = inputs;
+
+    console.log(inputs)
 
     //find user with username
     //hashed password
@@ -104,13 +105,19 @@ async function userRegister(req, res) {
         })
 
         if (userExistUsername) {
-            return res.send("User Already Exists with this username")
+            return res.json({
+                message: "User already exists with this username"
+            })
         }
         if (userExistEmail) {
-            return res.send("User Already Exist with this Email")
+            return res.json({
+                message: "User exists with this email"
+            })
         }
 
-        const hashedPass = await bcrypt.hash(password, 10);
+
+        const hashedPass = await bcrypt.hash(password.toString(), 10);
+
 
         const user = await userModel.create({
             email,
@@ -120,10 +127,12 @@ async function userRegister(req, res) {
         })
 
         await user.save();
-        res.send("User Successfully Registered")
+        res.json({
+            message: "User successfully registered"
+        })
 
     } catch (error) {
-        console.log(error)
+        console.log("Error " + error)
         res.json({
             Message: "Something error happens while Registering user"
         })
