@@ -1,7 +1,9 @@
 import axios from "axios";
 import backend from "./backend";
+import { useNavigate } from "react-router-dom";
 
 export const initPayment = (data, name, token) => {
+
 
     const options = {
         key: 'rzp_test_JiEJrykMcKRloz',
@@ -18,7 +20,7 @@ export const initPayment = (data, name, token) => {
                     const updateUserDataURL = `${backend}/users/purchaseCourse`;
                     const updataData = await axios.post(updateUserDataURL, { authToken: token, planName: name })
                     alert("Plan Successfully Purchased");
-
+                    alert("Purchases will be shown in the dashboard")
                 }
             } catch (error) {
                 console.log(error)
@@ -68,8 +70,8 @@ export async function changePassword(oldpass, newpass) {
 export async function handlePayment(name, token) {
     const orderUrl = `${backend}/api/payment/orders`;
     try {
-        const {data} = await axios.post(orderUrl, { planName: name })
-       
+        const { data } = await axios.post(orderUrl, { planName: name })
+
         initPayment(data.data, name, token)
     } catch (error) {
         console.log(error)

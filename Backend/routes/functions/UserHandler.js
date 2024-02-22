@@ -79,7 +79,6 @@ async function userRegister(req, res) {
 
     let { username, password, email } = inputs;
 
-    console.log(inputs)
 
     //find user with username
     //hashed password
@@ -132,7 +131,6 @@ async function userRegister(req, res) {
         })
 
     } catch (error) {
-        console.log("Error " + error)
         res.json({
             Message: "Something error happens while Registering user"
         })
@@ -207,8 +205,6 @@ async function purchaseCourse(req, res) {
             { username: decode },
             { $addToSet: { purchasedCourses: planName } }
         );
-
-        console.log(updateModel)
 
         res.json({
             Message: "Course SuccessFully Purchased"

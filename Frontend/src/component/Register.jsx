@@ -15,13 +15,17 @@ const Register = () => {
 
 
     async function getResponse(inputs) {
-        const response = await axios.post(`${BackendURL}/users/register`, { inputs })
-        console.log(response)
-        let Message = response.data.message;
-        alert(Message);
+        try {
+            const response = await axios.post(`${BackendURL}/users/register`, { inputs })
 
-        if (Message == "User successfully registered" || Message == "User already exists with this username") {
-            navigate("/login")
+            let Message = response.data.message;
+            alert(Message);
+
+            if (Message == "User successfully registered" || Message == "User already exists with this username") {
+                navigate("/login")
+            }
+        } catch (error) {
+            console.log(error)
         }
 
     }
