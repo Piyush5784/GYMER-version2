@@ -10,7 +10,7 @@ const mongoose = require("mongoose");
 require("dotenv").config();
 
 const url = process.env.mongoDbUrl;
-const port = 3001 || process.env.port;
+const port = process.env.port || 3001;
 const paymentRoutes = require("./routes/Payment")
 
 
