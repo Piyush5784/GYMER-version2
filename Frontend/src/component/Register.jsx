@@ -16,7 +16,11 @@ const Register = () => {
 
     async function getResponse(inputs) {
         try {
-            const response = await axios.post(`${BackendURL}/users/register`, { inputs })
+            const response = await axios.post(`${BackendURL}/users/register`, { inputs }, {
+                headers: {
+                    "Content-Type": "application/json",
+                },
+            },)
 
             let Message = response.data.message;
             alert(Message);
