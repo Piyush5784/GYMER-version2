@@ -42,7 +42,11 @@ const Login = () => {
 
         async function getResponse(inputs) {
             console.log(`${backend}/users/login`)
-            const response = await axios.post(`${backend}/users/login`, { inputs })
+            const response = await axios.post(`${backend}/users/login`, { inputs }, {
+                headers: {
+                    "Content-Type": "application/json",
+                },
+            },)
             let Message = response.data.Message;
             console.log(response)
             if (Message == "User Logged in") {
