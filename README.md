@@ -12,7 +12,7 @@ Welcome to the GYMER repository! This web application is designed to provide use
 ![Gym site](https://github.com/Piyush5784/GYMER/assets/105655779/2309d709-0b51-44e7-93dc-2d4ecee68d22)
 
 ##Videos
-https://github.com/Piyush5784/GYMER-version2/assets/105655779/ed1f6ce5-2fc5-458f-9d46-f2b57e0aa99c
+https://github.com/Piyush5784/GYMER-version2/assets/105655779/b8c1c098-e991-4cb0-9d28-d6f715def48e
 
 ## Features
 
