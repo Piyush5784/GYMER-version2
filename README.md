@@ -5,14 +5,13 @@ Welcome to the GYMER repository! This web application is designed to provide use
 ## Table of Contents
 - [Features](#features)
 - [Getting Started](#getting-started)
-- [Screensoft & Videos]
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
 
 ![Gym site](https://github.com/Piyush5784/GYMER/assets/105655779/2309d709-0b51-44e7-93dc-2d4ecee68d22)
 
+https://github.com/Piyush5784/GYMER-version2/assets/105655779/0b1dc4c1-b196-426d-a684-47504f7b2bbb
 
-https://github.com/Piyush5784/GYMER-version2/assets/105655779/b8c1c098-e991-4cb0-9d28-d6f715def48e
 
 ## Features
 
