@@ -16,19 +16,19 @@ const paymentRoutes = require("./routes/Payment")
 
 app.use(express.json());
 
-app.use("/users", userRoutes)
+app.use("/users", cors(), userRoutes)
 
-app.use("/admin", adminRoutes)
+app.use("/admin", cors(), adminRoutes)
 
 app.get("/", (req, res) => {
     res.send("OK");
 })
 
-app.use("/api/payment/", paymentRoutes)
+app.use("/api/payment/", cors(), paymentRoutes)
 
 
 app.use((err, req, res) => {
-    console.log(err)
+
     return res.json({
         Message: "Something went wrong , i might be wrong routes called"
     })

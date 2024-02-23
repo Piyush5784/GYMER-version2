@@ -42,19 +42,24 @@ const Login = () => {
 
         async function getResponse(inputs) {
             console.log(`${backend}/users/login`)
-            const response = await axios.post(`${backend}/users/login`, { inputs }, {
-                headers: {
-                    "Content-Type": "application/json",
-                },
-            },)
-            let Message = response.data.Message;
-            console.log(response)
-            if (Message == "User Logged in") {
-                navigate("/dashboard")
-                localStorage.setItem("authToken", response.data.authToken)
-            }
-            else {
-                alert(Message)
+            try {
+
+                const response = await axios.post(`${backend}/users/login`, { inputs }, {
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                },)
+                let Message = response.data.Message;
+                console.log(response)
+                if (Message == "User Logged in") {
+                    navigate("/dashboard")
+                    localStorage.setItem("authToken", response.data.authToken)
+                }
+                else {
+                    alert(Message)
+                }
+            } catch (error) {
+                console.log(error)
             }
         }
 
