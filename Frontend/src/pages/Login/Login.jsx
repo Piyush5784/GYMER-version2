@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import profilePic from "../../assets/profile_pic.png"
 import "./Login.css"
 import { Link, useNavigate } from "react-router-dom";
@@ -7,7 +7,7 @@ import axios from "axios";
 import backend from "../../../backend"
 const Login = () => {
     let navigate = useNavigate();
-
+    const [msg, setMsg] = useState("");
     let Username = useRef("")
     let Password = useRef("")
 
@@ -20,6 +20,13 @@ const Login = () => {
 
     }, [])
 
+    useEffect(() => {
+        async function checkServer() {
+            const response = await axios.get("https://gymer-backend.onrender.com/");
+            setMsg(response.data)
+        }
+        checkServer()
+    }, [])
 
 
 
@@ -66,6 +73,9 @@ const Login = () => {
     }
 
     return <>
+        <div style={{ textAlign: "center" }}>{msg === "OK" ? <p>Server is Running <br /> default username: rohan password: 123456789</p> : <p>Server is Down try going to link <a target="_blank" style={{ textDecoration: "underline" }} href="https://gymer-backend.onrender.com/">Server link </a> to check server </p>}</div>
+
+
         <div className="h-[100vh] w-full flex items-center justify-center">
             <div class="flex h-[31.25rem] w-[30%] flex-col items-center justify-center rounded-xl container">
                 <div class="h-[5rem] w-[5rem] rounded-[50%] bg-black profilePic " style={{ backgroundImage: `url(${profilePic})`, backgroundSize: "cover" }}></div>
