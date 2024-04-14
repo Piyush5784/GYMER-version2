@@ -47,13 +47,13 @@ const InputField = () => {
                 <div className="m-5">
 
                     {text == "changePassword" ? <div className="inputs">
-                        <input class="m-4 h-[3.125rem] w-[60%] border border-solid border-gray-400 p-4 rounded-xl p-5 text-left text-xl" ref={oldPassword} placeholder="Old password" />
-                        <input class="m-4 h-[3.125rem] w-[60%] border border-solid border-gray-400 p-4 rounded-xl p-5 text-left text-xl" ref={newPassword} placeholder="New password" />
-                        <input class="m-4 h-[3.125rem] w-[60%] border border-solid border-gray-400 p-4 rounded-xl p-5 text-left text-xl" ref={confirmPassword} placeholder="Confirm password" />
+                        <input class="m-4 h-[3.125rem] w-[60%] border border-solid border-gray-400 p-4 rounded-xl text-left text-xl" ref={oldPassword} placeholder="Old password" />
+                        <input class="m-4 h-[3.125rem] w-[60%] border border-solid border-gray-400 p-4 rounded-xl text-left text-xl" ref={newPassword} placeholder="New password" />
+                        <input class="m-4 h-[3.125rem] w-[60%] border border-solid border-gray-400 p-4 rounded-xl text-left text-xl" ref={confirmPassword} placeholder="Confirm password" />
                     </div> : <div className="inputs">
-                        <input class="m-4 h-[3.125rem] w-[60%] border border-solid border-gray-400 p-4 rounded-xl p-5 text-left text-xl" placeholder="password" />
-                        <input class="m-4 h-[3.125rem] w-[60%] border border-solid border-gray-400 p-4 rounded-xl p-5 text-left text-xl" placeholder="New username" />
-                        <input class="m-4 h-[3.125rem] w-[60%] border border-solid border-gray-400 p-4 rounded-xl p-5 text-left text-xl" placeholder="Confirm username" />
+                        <input class="m-4 h-[3.125rem] w-[60%] border border-solid border-gray-400 p-4 rounded-xl text-left text-xl" placeholder="password" />
+                        <input class="m-4 h-[3.125rem] w-[60%] border border-solid border-gray-400 p-4 rounded-xl text-left text-xl" placeholder="New username" />
+                        <input class="m-4 h-[3.125rem] w-[60%] border border-solid border-gray-400 p-4 rounded-xl text-left text-xl" placeholder="Confirm username" />
                     </div>}
 
 

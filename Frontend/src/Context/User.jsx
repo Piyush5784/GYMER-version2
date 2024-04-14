@@ -9,8 +9,6 @@ export const UserDataContext = createContext();
 export async function getData(token) {
     try {
         const response = await axios.post(`${BackendURL}/users/getUsersData`, { authToken: token })
-        // console.log(response)
-
         return response;
     } catch (error) {
         return error

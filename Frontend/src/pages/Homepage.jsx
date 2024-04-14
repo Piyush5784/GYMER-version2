@@ -16,11 +16,8 @@ import { Link } from "react-router-dom";
 
 export const Homepage = () => {
     return <>
-        {/* <Navbar />   */}
-        <p className="text-center lg:hidden sm:block ">The website is set view only in Desktop </p>
+        <p className="text-center md:hidden sm:block ">The website is set view only in Desktop </p>
         <div >
-
-
             <div className={`styles.fontJudson `}>
 
                 <div className={styles.container}>
