@@ -55,8 +55,11 @@ const Rates = () => {
 
     return <>
         <div className="rates flex items-center justify-center flex-col">
-            <Heading text={"Membership plans"} />
+            <div className="h-[200px] mt-20 text-black flex justify-center items-center">
 
+                <Heading text={"Membership plans"} />
+
+            </div>
             <div className="flex items-center justify-center w-[50%] text-center">
                 we understand that fitness goals vary, and so do individual preferences.
                 That's why we offer a range of membership plans to cater to diverse
@@ -64,14 +67,14 @@ const Rates = () => {
                 fitness aspirations.
             </div>
             <br />
-            <div className="plans flex justify-evenly w-full">
+            <div className="plans flex justify-center items-center gap-10 lg:flex-row md:justify-evenly w-full flex-col">
 
                 <div onClick={() => setSelectedPlan("Basic")}>
                     <Plans heading={"Basic"} show={false} rate="₹999" list={["Full Access", "Participation in group", "Assessment and orientation", "Rooms and Shower facilities"]} />
                 </div>
 
                 <div onClick={() => setSelectedPlan("Premium")}>
-                    <Plans heading={"Premium"} show={false} rate="₹2299" list={["All Features of Basic plan", "Discounts on personal training sessions", "Premium locker room and amenities.", "Rooms and Shower facilities"]} />
+                    <Plans heading={"Premium"} show={false} rate="₹2299" list={["All Features of Basic plan", "Discounts on personal training sessions", "Premium locker room and amenities."]} />
                 </div>
 
                 <div onClick={() => setSelectedPlan("Pro")}>

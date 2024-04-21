@@ -8,13 +8,14 @@ import Register from './component/Register'
 import Dashboard from './pages/Dashboard/Dashboard'
 import Rates from './pages/Rates/Rates'
 import { UserDataProvider } from "./Context/User.jsx"
+import Navbar2 from './component/Navbar/Navbar2.jsx'
 function App() {
 
   return (
     <>
       <UserDataProvider>
         <Router>
-          <Navbar />
+          <Navbar2 />
           <Routes>
 
             <Route path='/' element={<Homepage />}></Route>

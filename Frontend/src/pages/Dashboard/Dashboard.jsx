@@ -58,10 +58,10 @@ const Dashboard = () => {
 
             <div class="flex h-[100%] w-[30%] flex-col bg-black">
 
-                <div class="ml-3 mb-[3.125rem]">
+                <div class="mt-[100px] mb-[3.125rem] flex justify-center items-center">
 
                     {/* <div class="m-4 ml-8 w-3 rounded-[50%] bg-blue-100 p-10" ></div> */}
-                    <div class="h-[5rem] ml-8 w-[5rem] rounded-[50%] bg-black profilePic " style={{ backgroundImage: `url(${profilePic})`, backgroundSize: "cover" }}></div>
+                    {/* <div class="h-[5rem] ml-8 w-[5rem] rounded-[50%] bg-black profilePic " style={{ backgroundImage: `url(${profilePic})`, backgroundSize: "cover" }}></div> */}
 
                 </div>
 
@@ -79,17 +79,16 @@ const Dashboard = () => {
                 </div>
             </div>
 
-            {/* --sidebar ends */}
 
             <div class="h-[100%] w-[80%]" style={{ backgroundColor: "#BABABA" }}>
 
 
                 <div class="profileSection">
-                    <div class="m-8 flex">
+                    <div class="m-8 flex mt-[100px]">
                         <BackButton />
                         <div class="m-2">
-                            <div class="text-xl black">{text}</div>
-                            <p className="text-white" >Home <i class="fa-solid fa-caret-right"></i> {text}</p>
+                            <div class="text-xl text-black">{text || "Back"}</div>
+                            <p className="text-white" >Home  <i class="fa-solid fa-caret-right"></i> {text}</p>
                         </div>
                     </div>
 

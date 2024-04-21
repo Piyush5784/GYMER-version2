@@ -4,36 +4,35 @@
 .heading {
   font-family: "Judson";
   font-size: 3.4375rem;
-
   margin-top: 5.625rem;
 }
 
-.flexContainer {
+/* .flexContainer {
   display: flex;
   justify-content: space-evenly;
-}
+} */
 
 .herotext {
   font-family: "Inter";
-  font-weight: lighter;
-  text-align: center;
+  /* font-weight: lighter; */
+  /* text-align: center; */
   font-size: 1.5625rem;
-  margin-top: 0rem;
+  /* margin-top: 0rem; */
   line-height: 1.875rem;
 }
 
 .container {
-  display: flex;
+  /* display: flex;
   color: white;
   line-height: 5.125rem;
   text-align: center;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+  flex-direction: column; */
   background-image: url(/src/assets/img1.jpg);
-  background-repeat: no-repeat;
+  /* background-repeat: no-repeat;
   background-size: cover;
-  height: 46.875rem;
+  height: 46.875rem; */
 }
 
 .fontJudson {
@@ -41,8 +40,8 @@
 }
 
 .plans {
-  display: flex;
+  /* display: flex;
   justify-content: space-evenly;
   align-items: center;
-  margin: 30px;
+  margin: 30px; */
 }

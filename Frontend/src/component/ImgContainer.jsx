@@ -2,7 +2,7 @@ import React from "react";
 
 const ImgContainer = ({ src }) => {
     return <>
-        <img class=" max-lg rounded-lg" style={{ width: "43.75rem", margin: "3.75rem" }} src={src} alt="image description" />
+        <img className="w-[400px] md:w-[700px] m-[3.75rem] ml-7 rounded-xl max-lg lg:m-0 " src={src} alt="image description" />
     </>;
 };
 

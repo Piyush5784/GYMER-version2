@@ -12,61 +12,81 @@ import Plans from "../component/Plans/Plans";
 import Message from "../component/Message";
 import Footer from "../component/Footer";
 import { Link } from "react-router-dom";
-
-
+// .heading {
+//     font-family: "Judson";
+//     font-size: 3.4375rem;
+//     margin-top: 5.625rem;
+//   }
+// .herotext {
+//     font-family: "Inter";
+//     font-weight: lighter;
+//     text-align: center;
+//     font-size: 1.5625rem;
+//     margin-top: 0rem;
+//     line-height: 1.875rem;
+//   }
+// 881285
 export const Homepage = () => {
     return <>
-        <p className="text-center md:hidden sm:block ">The website is set view only in Desktop </p>
-        <div >
-            <div className={`styles.fontJudson `}>
+        <div className="w-full">
+            <div >
+                <div className={`${styles.fontJudson}`}>
 
-                <div className={styles.container}>
-                    <h1 className={styles.heading}>GET YOUR BODY <br /> IN SHAPE</h1>
+                    <div className={`${styles.container} w-auto flex text-white text-center justify-center items-center flex-col lg:h-[46.875rem] md:h-[700px] sm:h-[800px] bg-cover`}>
+                        <h1 className={`${styles.heading} text-md`}  >GET YOUR BODY <br /> IN SHAPE</h1>
 
-                    <p className={styles.herotext}> Our state-of-the-art facility is designed to <br /> provide a motivating
-                        <br /> and supportive environment for individuals of <br /> all fitness levels.
-                    </p>
+                        <p className={`font-extralight text-center mt-0 ${styles.herotext}`}> Our state-of-the-art facility is designed to <br /> provide a motivating
+                            <br /> and supportive environment for individuals of <br /> all fitness levels.
+                        </p>
+                        <div className="buttons">
+                            <Link to={"/register"}><Button text={"Join Now"} /></Link>
+                            <Button text={"Learn More"} />
+                        </div>
+                    </div >
+                    <Facilities />
+                    <hr />
 
-                    <div className="buttons">
-                        <Link to={"/register"}><Button text={"Join Now"} /></Link>
-                        <Button text={"Learn More"} />
-                    </div>
-                </div >
-                <Facilities />
-                <hr />
+                    <OurMission />
+                    <div className={`lg:flex-row flex flex-col justify-center items-center`} >
 
-                <OurMission />
-                <div className={styles.flexContainer}>
-                    <div style={{ width: "33.75rem", display: "flex", justifyContent: "center", alignItems: "center", height: "25rem" }}>
+                        <div className="w-[33.75rem] h-[30rem]">
+                            <div>
+                                <Subheading text={"Inspire"} />
+                            </div>
+                            <div className="flex  flex-col m-3 items-center justify-center">
+
+                                <PageText text={"Our mission is to inspire and empower our \n members to lead healthier, \n happier lives through fitness. we are \n dedicated to providing top-notch \n facilities, expert guidance, and a sense of \ncommunity that makes every \n workout enjoyable."} />
+                                <ButtonBlack text={"Learn More"} />
+                            </div>
+
+                        </div>
+
                         <div>
-                            <Subheading text={"Inspire"} />
 
-                            <PageText text={"Our mission is to inspire and empower our \n members to lead healthier, \n happier lives through fitness. we are \n dedicated to providing top-notch \n facilities, expert guidance, and a sense of \ncommunity that makes every \n workout enjoyable."} />
-                            <ButtonBlack text={"Learn More"} />
+                            <ImgContainer src={ImgArr[6]} />
 
                         </div>
                     </div>
-                    <ImgContainer src={ImgArr[6]} />
                 </div>
+                <hr />
+
+
+                <Message />
+                <Heading text={"Membership Plans"} />
+
+                <PageText text={"We understand that fitness goals vary, and so do individual perferences. \n That's why we off a range of membership plans to cater to diverse \n needs. Choose the one that aligns perfectly with your lifestyle and fitness aspirations."} />
+                <div className={`flex flex-col md:flex-row justify-evenly items-center m-[30px] `}>
+
+                    <Plans heading={"Basic"} list={["Full Access", "Participation in group", "Assessment and orientation", "Rooms and Shower facilities"]} />
+
+                    <Plans heading={"Premium"} list={["All Features of Basic plan", "Discounts on personal training sessions", "Premium locker room and amenities.", "Rooms and Shower facilities"]} />
+
+                    <Plans heading={"Pro"} list={["All Features of Basic and Premium plan", "Personal Coach", "Personal diet plan and assessment", "Unlimited access to all classes"]} />
+                </div>
+
+                <Footer />
+
             </div>
-            <hr />
-
-
-            <Message />
-            <Heading text={"Membership Plans"} />
-
-            <PageText text={"We understand that fitness goals vary, and so do individual perferences. \n That's why we off a range of membership plans to cater to diverse \n needs. Choose the one that aligns perfectly with your lifestyle and fitness aspirations."} />
-            <div className={styles.plans}>
-
-                <Plans heading={"Basic"} list={["Full Access", "Participation in group", "Assessment and orientation", "Rooms and Shower facilities"]} />
-
-                <Plans heading={"Premium"} list={["All Features of Basic plan", "Discounts on personal training sessions", "Premium locker room and amenities.", "Rooms and Shower facilities"]} />
-
-                <Plans heading={"Pro"} list={["All Features of Basic and Premium plan", "Personal Coach", "Personal diet plan and assessment", "Unlimited access to all classes"]} />
-            </div>
-
-            <Footer />
-
         </div>
 
     </>;
