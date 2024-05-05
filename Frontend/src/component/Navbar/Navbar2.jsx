@@ -25,19 +25,19 @@ const Navbar2 = () => {
     return (
         <>
             <div className="bg-black p-6 fixed text-white w-full">
-                <div className="flex justify-between">
+                <div className="flex justify-between items-center">
                     <div className="lg:pl-[77px] duration-300">Developer</div>
                     <div onClick={() => setShowMenu((c) => !c)} className="md:invisible ">
                         {showMenu ? (
-                            // <i className="fa-solid fa-xmark">---</i>
-                            "Menu"
+                            <i className="fa-solid fa-xmark"></i>
+                            // "Menu"
                         ) : (
-                            // <i className="fa-solid fa-bars ">---</i>
-                            "Menu"
+                            <i className="fa-solid fa-bars "></i>
+                            // "Menu"
                         )}
                     </div>
 
-                    <div className="hidden md:flex">
+                    <div className="hidden md:flex md:justify-center md:items-center">
                         <div>
                             <Link to={"/"} className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-md font-medium">Home</Link>
                         </div>
@@ -51,8 +51,8 @@ const Navbar2 = () => {
                             <Link className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-md font-medium" to={"/dashboard"}>Dashboard</Link>
                         </div>
                         {userlogged ? (
-                            <div onClick={() => logoutButtonHandler()}>
-                                <button className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-md font-medium">
+                            <div>
+                                <button onClick={() => logoutButtonHandler()} className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-md font-medium">
                                     logout
                                 </button>
                             </div>
@@ -89,9 +89,9 @@ const Navbar2 = () => {
                             <Link className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-md font-medium" to={"/dashboard"}>Dashboard</Link>
 
                         </li>
-                        {userlogged ? (<li><button className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-md font-medium">
+                        {userlogged ? (<a className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-md font-medium">
                             logout
-                        </button></li>) : (<li>
+                        </a>) : (<li>
                             <Link className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-md font-medium" to={"/login"}>Login</Link>
                         </li>)}
                     </ul>

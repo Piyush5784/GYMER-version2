@@ -64,11 +64,15 @@ const Register = () => {
     }
 
     return <>
-        <div style={{ textAlign: "center" }}>{msg === "OK" ? "Server is Running" : <p>Server is Down try going to link <a target="_blank" style={{ textDecoration: "underline" }} href="https://gymer-backend.onrender.com/">Server link </a> to check server </p>}</div>
+        <div className="pt-[100px] text-center">
+            Server takes 1 min (max 2) to start because of free deployment.
+        </div>
+        <div style={{ textAlign: "center" }} className="">{msg === "OK" ? <p>Current Status: Server is Running <br /> default username: rohan password: 123456789</p> : <p>Server is Down try going to link <a target="_blank" style={{ textDecoration: "underline" }} href="https://gymer-backend.onrender.com/">Server link </a> to start server (takes 1min)</p>}</div>
 
-        <div className="h-[100vh] w-full flex items-center justify-center">
 
-            <div class="flex h-[31.25rem] w-[30%] flex-col items-center justify-center rounded-xl container">
+        <div className="h-[100vh] w-full flex items-center justify-center duration-300">
+
+            <div class="flex h-[31.25rem] w-[90%] md:w-[40%] lg:w-[30%] flex-col items-center justify-center rounded-xl container">
                 <div class="h-[5rem] w-[5rem] rounded-[50%] bg-black profilePic " style={{ backgroundImage: `url(${profilePic})`, backgroundSize: "cover" }}></div>
                 <input class="m-4 h-[3.125rem] w-[80%] rounded-xl p-5 text-left text-xl" ref={Email} placeholder="Email" />
                 <input class="m-4 h-[3.125rem] w-[80%] rounded-xl p-5 text-left text-xl" ref={Username} placeholder="Username" />

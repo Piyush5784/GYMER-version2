@@ -29,10 +29,12 @@ import { Link } from "react-router-dom";
 export const Homepage = () => {
     return <>
         <div className="w-full">
+
             <div >
                 <div className={`${styles.fontJudson}`}>
-
+                    <p className="text-center text-white">The website is set to view only in destop mode</p>
                     <div className={`${styles.container} w-auto flex text-white text-center justify-center items-center flex-col lg:h-[46.875rem] md:h-[700px] sm:h-[800px] bg-cover`}>
+
                         <h1 className={`${styles.heading} text-md`}  >GET YOUR BODY <br /> IN SHAPE</h1>
 
                         <p className={`font-extralight text-center mt-0 ${styles.herotext}`}> Our state-of-the-art facility is designed to <br /> provide a motivating
