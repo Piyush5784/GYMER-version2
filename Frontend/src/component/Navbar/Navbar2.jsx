@@ -29,11 +29,11 @@ const Navbar2 = () => {
                     <div className="lg:pl-[77px] duration-300">Developer</div>
                     <div onClick={() => setShowMenu((c) => !c)} className="md:invisible ">
                         {showMenu ? (
-                            <i className="fa-solid fa-xmark"></i>
-                            // "Menu"
+                            // <i className="fa-solid fa-xmark"></i>
+                            "Menu"
                         ) : (
-                            <i className="fa-solid fa-bars "></i>
-                            // "Menu"
+                            // <i className="fa-solid fa-bars "></i>
+                            "Menu"
                         )}
                     </div>
 

@@ -67,7 +67,7 @@ const Register = () => {
         <div className="pt-[100px] text-center">
             Server takes 1 min (max 2) to start because of free deployment.
         </div>
-        <div style={{ textAlign: "center" }} className="">{msg === "OK" ? <p>Current Status: Server is Running <br /> default username: rohan password: 123456789</p> : <p>Server is Down try going to link <a target="_blank" style={{ textDecoration: "underline" }} href="https://gymer-backend.onrender.com/">Server link </a> to start server (takes 1min)</p>}</div>
+        <div style={{ textAlign: "center" }} className="">{msg === "OK" ? <p>Current Status: Server is Running <br /> Test username: rohan password: 123456789</p> : <p>Server is Down try going to link <a target="_blank" style={{ textDecoration: "underline" }} href="https://gymer-backend.onrender.com/">Server link </a> to start server (takes 1min)</p>}</div>
 
 
         <div className="h-[100vh] w-full flex items-center justify-center duration-300">
