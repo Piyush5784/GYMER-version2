@@ -69,15 +69,15 @@ const Rates = () => {
             <br />
             <div className="plans flex justify-center items-center gap-10 lg:flex-row md:justify-evenly w-full flex-col">
 
-                <div onClick={() => setSelectedPlan("Basic")}>
+                <div onClick={() => setSelectedPlan("Basic")} className={`${selectedPlan == "Basic" && "ring-8 rounded-xl"} cursor-pointer`} >
                     <Plans heading={"Basic"} show={false} rate="₹999" list={["Full Access", "Participation in group", "Assessment and orientation", "Rooms and Shower facilities"]} />
                 </div>
 
-                <div onClick={() => setSelectedPlan("Premium")}>
+                <div onClick={() => setSelectedPlan("Premium")} className={`${selectedPlan == "Premium" && "ring-8 rounded-xl"} cursor-pointer`}>
                     <Plans heading={"Premium"} show={false} rate="₹2299" list={["All Features of Basic plan", "Discounts on personal training sessions", "Premium locker room and amenities."]} />
                 </div>
 
-                <div onClick={() => setSelectedPlan("Pro")}>
+                <div onClick={() => setSelectedPlan("Pro")} className={`${selectedPlan == "Pro" && "ring-8 rounded-xl"} cursor-pointer`}>
                     <Plans heading={"Pro"} show={false} rate="₹2599" list={["All Features of Basic and Premium plan", "Personal Coach", "Personal diet plan and assessment", "Unlimited access to all classes"]} />
 
                 </div>
