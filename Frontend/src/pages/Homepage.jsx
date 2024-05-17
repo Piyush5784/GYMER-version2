@@ -12,22 +12,10 @@ import Plans from "../component/Plans/Plans";
 import Message from "../component/Message";
 import Footer from "../component/Footer";
 import { Link } from "react-router-dom";
-// .heading {
-//     font-family: "Judson";
-//     font-size: 3.4375rem;
-//     margin-top: 5.625rem;
-//   }
-// .herotext {
-//     font-family: "Inter";
-//     font-weight: lighter;
-//     text-align: center;
-//     font-size: 1.5625rem;
-//     margin-top: 0rem;
-//     line-height: 1.875rem;
-//   }
-// 881285
+import Navbar2 from "../component/Navbar/Navbar2";
 export const Homepage = () => {
     return <>
+
         <div className="w-full">
 
             <div >
@@ -49,13 +37,13 @@ export const Homepage = () => {
                     <hr />
 
                     <OurMission />
-                    <div className={`lg:flex-row flex flex-col justify-center items-center`} >
+                    <div className={`lg:flex-row flex flex-col justify-center items-center gap-[50px]`} >
 
                         <div className="w-[33.75rem] h-[30rem]">
                             <div>
                                 <Subheading text={"Inspire"} />
                             </div>
-                            <div className="flex  flex-col m-3 items-center justify-center">
+                            <div className="flex flex-col m-3 items-center justify-center">
 
                                 <PageText text={"Our mission is to inspire and empower our \n members to lead healthier, \n happier lives through fitness. we are \n dedicated to providing top-notch \n facilities, expert guidance, and a sense of \ncommunity that makes every \n workout enjoyable."} />
                                 <ButtonBlack text={"Learn More"} />

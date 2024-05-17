@@ -18,8 +18,9 @@ const Footer = () => {
                 <p style={{ color: "white", fontFamily: "Inter", fontWeight: "lighter", fontSize: "1.375rem" }}>Stay in the loop and elevate your fitness journey by subsribing to our <br /> newsletter. Receive exclusive content, expert tips, and exciting updates
                     <br /> right in your inbox. Whether your're a gym enthusiast, a fitness beginner, <br /> or someone looking for motivation, our newsletter has <br /> something for everyone.</p>
             </div>
-            <div style={{ display: "flex", justifyContent: "space-evenly", alignItems: "center", margin: "1.875rem" }}>
+            <div style={{ display: "flex", justifyContent: "space-evenly", alignItems: "center", margin: "1.875rem" }} className="w-[90%]">
                 <i class="fa-brands fa-instagram" style={{ color: "#ffffff", fontSize: "6.25rem" }}></i>
+
 
                 <i class="fa-brands fa-hashnode" style={{ color: "#ffffff", fontSize: "6.25rem" }}></i>
                 <i class="fa-brands fa-medium" style={{ color: "#ffffff", fontSize: "6.25rem" }}></i>

@@ -15,6 +15,7 @@ function App() {
     <>
       <UserDataProvider>
         <Router>
+
           <Navbar2 />
           <Routes>
 

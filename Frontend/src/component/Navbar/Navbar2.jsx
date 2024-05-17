@@ -24,9 +24,9 @@ const Navbar2 = () => {
     }
     return (
         <>
-            <div className="bg-black p-6 fixed text-white w-full">
+            <div className="bg-black p-6 fixed text-white w-screen">
                 <div className="flex justify-between items-center">
-                    <div className="lg:pl-[77px] duration-300">Developer</div>
+                    <div className=" duration-300">Developer</div>
                     <div onClick={() => setShowMenu((c) => !c)} className="md:invisible ">
                         {showMenu ? (
                             // <i className="fa-solid fa-xmark"></i>
