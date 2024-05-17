@@ -1,5 +1,6 @@
 
 import './App.css'
+import { memo } from 'react'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import { Homepage } from './pages/Homepage'
 import Navbar from './component/Navbar/Navbar.jsx'
@@ -9,13 +10,15 @@ import Dashboard from './pages/Dashboard/Dashboard'
 import Rates from './pages/Rates/Rates'
 import { UserDataProvider } from "./Context/User.jsx"
 import Navbar2 from './component/Navbar/Navbar2.jsx'
+import { Toaster } from 'react-hot-toast'
+import toast from "react-hot-toast";
 function App() {
 
   return (
     <>
       <UserDataProvider>
         <Router>
-
+          <Toaster />
           <Navbar2 />
           <Routes>
 
@@ -35,4 +38,4 @@ function App() {
   )
 }
 
-export default App
+export default memo(App)

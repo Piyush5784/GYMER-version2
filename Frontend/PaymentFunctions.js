@@ -1,7 +1,7 @@
 import axios from "axios";
 import backend from "./backend";
 import { useNavigate } from "react-router-dom";
-
+import toast from "react-hot-toast";
 export const initPayment = (data, name, token) => {
   const options = {
     key: "rzp_test_JiEJrykMcKRloz",
@@ -20,8 +20,8 @@ export const initPayment = (data, name, token) => {
             authToken: token,
             planName: name,
           });
-          alert("Plan Successfully Purchased");
-          alert("Purchases will be shown in the dashboard");
+          toast.success("Plan Successfully Purchased");
+          toast.success("Purchases will be shown in the dashboard");
         }
       } catch (error) {
         console.log(error);

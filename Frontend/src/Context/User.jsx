@@ -17,6 +17,7 @@ export async function getData(token) {
 
 export const UserDataProvider = ({ children }) => {
     const [userData, setUserDataState] = useState();
+    const [refresh, setRefresh] = useState();
 
     function checkToken() {
         const token = localStorage.getItem("authToken");
@@ -39,7 +40,7 @@ export const UserDataProvider = ({ children }) => {
     }, []);
 
     return (
-        <UserDataContext.Provider value={{ userData, setUserDataState }}>
+        <UserDataContext.Provider value={{ userData, setUserDataState, refresh, setRefresh }}>
             {children}
         </UserDataContext.Provider>
     );

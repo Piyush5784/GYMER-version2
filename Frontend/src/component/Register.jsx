@@ -3,6 +3,7 @@ import profilePic from "../assets/profile_pic.png"
 import { Link, useNavigate } from "react-router-dom";
 import { registerModel } from "../../format";
 import axios from "axios";
+import toast from "react-hot-toast";
 import BackendURL from "../../backend";
 
 const Register = () => {
@@ -55,7 +56,7 @@ const Register = () => {
         let CheckFormat = registerModel.safeParse(inputs)
 
         if (!CheckFormat.success) {
-            return alert("Enter correct email && password should be 8 digit")
+            return toast.error("Enter correct email && password should be 8 digit")
         }
         else {
             getResponse(inputs)

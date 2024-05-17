@@ -5,8 +5,7 @@ import { UserDataContext } from "../../Context/User";
 const Navbar2 = () => {
     const [showMenu, setShowMenu] = useState(false);
     const navigate = useNavigate();
-    let { userData, setUserDataState } = useContext(UserDataContext);
-
+    let { userData, setUserDataState, setRefresh, refresh } = useContext(UserDataContext);
     let [userlogged, setUserLogged] = useState(false);
 
     useEffect(() => {
@@ -16,6 +15,10 @@ const Navbar2 = () => {
         }
     }, [setUserDataState]);
 
+    // useEffect(() => {
+    //     console.log(refresh)
+    //     setRefresh('1')
+    // }, [])
     function logoutButtonHandler() {
         localStorage.removeItem("authToken");
         navigate("/login");

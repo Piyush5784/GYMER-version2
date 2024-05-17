@@ -1,4 +1,5 @@
 import React, { useRef, useState } from "react";
+import toast from "react-hot-toast";
 import { changePassword } from "../../PaymentFunctions";
 
 
@@ -15,13 +16,12 @@ const InputField = () => {
         let confirmPass = confirmPassword.current.value;
 
         if (oldpass == "" || newpass == "" || confirmPass == "") {
-            alert('Input All fields to proceed')
+            toast.error('Input All fields to proceed')
         }
         else if (newpass !== confirmPass) {
-            alert("New Password and confirm password mismatched")
+            toast.error("New Password and confirm password mismatched")
         }
         else {
-            console.log(oldpass, newpass)
             changePassword(oldpass, newpass)
         }
     }

@@ -5,6 +5,7 @@ import ButtonBlack from "../../component/ButtonBlack.jsx";
 import { getData } from "../../Context/User.jsx";
 import { handlePayment } from "../../../PaymentFunctions.js";
 import { useNavigate } from "react-router-dom";
+import toast from "react-hot-toast";
 const Rates = () => {
     const navigate = useNavigate()
 
@@ -13,7 +14,7 @@ const Rates = () => {
         let token = localStorage.getItem("authToken");
         let userData = getData(token);
         if (userData == undefined) {
-            alert("Invalid Token")
+            toast.error("Invalid Token")
         }
     }, [])
 
@@ -28,12 +29,12 @@ const Rates = () => {
         let token = localStorage.getItem("authToken");
 
         if (token == undefined) {
-            alert("Login to Proceed")
+            toast.info("Login to Proceed")
             navigate("/login")
             return;
         }
         if (!(checkboxValue.checked)) {
-            return alert("You must agree to the privacy policy before checkout")
+            return toast.info("You must agree to the privacy policy before checkout")
         }
         else if (selectedPlan == "Basic") {
             return handlePayment("Basic", token)
@@ -46,7 +47,7 @@ const Rates = () => {
 
         }
         else {
-            return alert("Select Any Plan before paying")
+            return toast.info("Select Any Plan before paying")
         }
 
     }
